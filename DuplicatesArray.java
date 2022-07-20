@@ -34,6 +34,30 @@ class Leet442 {
 }
 
 
+// using second array
+class Solution {
+    public static ArrayList<Integer> duplicates(int arr[], int n) {
+          int ar[]= new int [n];
+       int count =0;
+       ArrayList<Integer> a = new ArrayList<>();
+       for( int i=0;i<n;i++)
+           ar[arr[i]]++;
+       for(int i=0;i<n;i++)
+       {
+           if(ar[i]>1)
+           {
+               a.add(i);
+               count++;
+           }
+       }
+       if( count !=0) return a;
+       else{
+           a.add(-1);
+           return a;
+       } 
+       
+    }
+}
 
 
 // using two loops + arraylist methods(sort, add, reurn) +   N^2
