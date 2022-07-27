@@ -55,14 +55,22 @@ int minOperations(int[] arr, int n, int k) {
     }
 }
 ***********************************************
- int count=-1;
+ class Solution {
+    int minOperations(int[] arr, int n, int k) {
+        // code here
+        int count=0;
         int i=1;
+        
         Arrays.sort(arr);
-        while(arr[0]<k){
+    
+        while(arr[0]<k|| (i<n && arr[i]<k) ){
             arr[0]+=arr[i];
             count++;
             i++;
+           // System.out.println(Arrays.toString(arr)+"loop"+i);
             
         
         }
         return count;
+    }
+}
