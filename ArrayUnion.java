@@ -24,6 +24,7 @@ class Solution
         for(int j=0;j<m;j++)hs.add(arr2[j]);
         
         ArrayList<Integer> al=new ArrayList<>();
+        //  al.addAll(hs);
         for(int ob:hs){
             al.add(ob);
         }
