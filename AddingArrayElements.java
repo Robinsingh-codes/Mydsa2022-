@@ -54,3 +54,15 @@ int minOperations(int[] arr, int n, int k) {
     return count;
     }
 }
+***********************************************
+ int count=-1;
+        int i=1;
+        Arrays.sort(arr);
+        while(arr[0]<k){
+            arr[0]+=arr[i];
+            count++;
+            i++;
+            
+        
+        }
+        return count;
